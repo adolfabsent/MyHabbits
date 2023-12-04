@@ -7,9 +7,7 @@
 
 import UIKit
 
-import UIKit
-
-class HabitViewController: UIViewController, UIColorPickerViewControllerDelegate {
+final class HabitViewController: UIViewController, UIColorPickerViewControllerDelegate {
 
     var habitIndex: Int = 0
     var calledForEditing = false
@@ -270,7 +268,7 @@ class HabitViewController: UIViewController, UIColorPickerViewControllerDelegate
         colorPicker.backgroundColor = color
         self.color = color
     }
-    
+
     /// Delete
     @objc func deleteHabbit () {
         alertController.addAction(UIAlertAction(title: "Отмена", style: .default, handler: { _ in

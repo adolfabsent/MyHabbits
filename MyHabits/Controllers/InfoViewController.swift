@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController {
+final class InfoViewController: UIViewController {
     
     private let infoText : String = """
         Прохождение этапов, за которые за 21 день вырабатывается привычка, подчиняется следующему алгоритму:

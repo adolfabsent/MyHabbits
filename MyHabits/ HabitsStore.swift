@@ -9,13 +9,10 @@ import UIKit
 
 public final class Habit: Codable {
 
-public var name: String
-
-public var date: Date
-
-public var trackDates: [Date]
-
-public var color: UIColor {
+    public var name: String
+    public var date: Date
+    public var trackDates: [Date]
+    public var color: UIColor {
         get {
             return .init(red: r, green: g, blue: b, alpha: a)
         }

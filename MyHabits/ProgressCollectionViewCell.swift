@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProgressCollectionViewCell: UICollectionViewCell {
+final class ProgressCollectionViewCell: UICollectionViewCell {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -40,7 +40,6 @@ class ProgressCollectionViewCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super .init(frame: frame)
-
         self.backgroundColor = .white
         contentView.addSubview(titleLabel)
         contentView.addSubview(percentageLabel)
@@ -61,7 +60,7 @@ class ProgressCollectionViewCell: UICollectionViewCell {
 
             percentageLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             percentageLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -12),
-            
+
             progressBar.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 38),
             progressBar.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 12),
             progressBar.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -12),
