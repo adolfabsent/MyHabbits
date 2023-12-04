@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HabitDetailsViewController: UIViewController {
+final class HabitDetailsViewController: UIViewController {
 
     var detailHabitIndex: Int = 0
 
@@ -60,7 +60,7 @@ class HabitDetailsViewController: UIViewController {
     }
 
     ///  Function "Pravit'"
-    @objc func editHabit (){
+    @objc private func editHabit (){
         let VC = HabitViewController()
         VC.habitIndex = detailHabitIndex
         VC.calledForEditing = true
@@ -69,17 +69,13 @@ class HabitDetailsViewController: UIViewController {
     }
 
     /// Hide controller
-    @objc func hideDetailView(notification: Notification ){
+    @objc private func hideDetailView(notification: Notification ){
         self.navigationController?.popViewController(animated: false)
         NotificationCenter.default.removeObserver(self)
     }
 }
 
 extension HabitDetailsViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "АКТИВНОСТЬ"
